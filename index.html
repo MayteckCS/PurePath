@@ -8,92 +8,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; }
-    </script>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), 
+            url('https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-white text-slate-800">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <i data-lucide="sparkles" class="text-teal-500"></i>
-                <span class="font-bold text-xl tracking-tight text-slate-900">PurePath</span>
+                <i data-lucide="sparkles" class="text-teal-500 w-6 h-6"></i>
+                <span class="font-bold text-xl tracking-tight text-slate-900 uppercase">PurePath</span>
             </div>
-            <a href="tel:1234567890" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-md">
-                Get Free Quote
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="#services" class="hover:text-teal-600 transition">Services</a>
+                <a href="#about" class="hover:text-teal-600 transition">Our Story</a>
+            </div>
+            <a href="tel:1234567890" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-teal-200">
+                Get a Quote
             </a>
         </div>
     </nav>
 
-    <header class="hero-gradient h-[70vh] flex items-center justify-center text-center px-6">
-        <div class="max-w-3xl">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">A Family Touch for a Flawless Home</h1>
-            <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">Mother-daughter led residential cleaning in Orange County. Eco-friendly, detail-oriented, and fully insured.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <button class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">Book Your Cleaning</button>
-                <button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all">View Services</button>
-            </div>
-        </div>
-    </header>
-
-    <section class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Our Family Standards</h2>
-            <p class="text-slate-500">Professional cleaning services tailored to your lifestyle.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow">
-                <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                    <i data-lucide="home"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-slate-900">Residential Deep Clean</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">A top-to-bottom refresh of your entire home, focusing on every corner, baseboard, and hidden surface.</p>
-            </div>
-            
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow">
-                <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                    <i data-lucide="leaf"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-slate-900">Eco-Maintenance</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Regular upkeep using 100% non-toxic, pet-safe products. Keep your home safe and sparkling.</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow">
-                <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                    <i data-lucide="truck"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-slate-900">Move-In/Out</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Making your transition seamless with a thorough cleaning of empty spaces for the next chapter.</p>
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl text-center">
+            <span class="inline-block bg-teal-500/20 text-teal-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">Family Owned & Operated</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">A Family Touch for a <span class="text-teal-400">Flawless</span> Home.</h1>
+            <p class="text-xl text-slate-200 mb-10 max-w-2xl mx-auto">Premium residential cleaning in Huntington Beach. Mother-daughter led, eco-friendly, and detail-obsessed.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 rounded-2xl font-bold text-lg transition shadow-2xl shadow-teal-900/20">Our Services</a>
+                <a href="#contact" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-10 py-4 rounded-2xl font-bold text-lg backdrop-blur-md transition">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <section class="bg-teal-900 py-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-white mb-8 italic">"We treat every home like it's our own."</h2>
-            <div class="flex justify-center items-center gap-4 mb-8">
-                <div class="h-px w-12 bg-teal-500"></div>
-                <p class="text-teal-300 font-semibold tracking-widest uppercase text-sm font-bold">The Mother-Daughter Team</p>
-                <div class="h-px w-12 bg-teal-500"></div>
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="group">
+                <div class="mb-6 inline-block p-4 bg-teal-50 text-teal-600 rounded-3xl group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                    <i data-lucide="home" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Deep Residential</h3>
+                <p class="text-slate-500 leading-relaxed">More than a surface wipe. We clean baseboards, vents, and those "hidden" spots most corporate cleaners skip.</p>
             </div>
-            <p class="text-teal-50/80 leading-loose text-lg">With over 15 years of combined experience in local hospitality and residential care, we realized that what was missing was the personal touch. PurePath was founded to provide reliable, professional cleaning that feels personal, not corporate.</p>
+            <div class="group">
+                <div class="mb-6 inline-block p-4 bg-teal-50 text-teal-600 rounded-3xl group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                    <i data-lucide="leaf" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Eco-Maintenance</h3>
+                <p class="text-slate-500 leading-relaxed">Scheduled upkeep using 100% non-toxic, pet-safe products. Perfect for families with little ones or furry friends.</p>
+            </div>
+            <div class="group">
+                <div class="mb-6 inline-block p-4 bg-teal-50 text-teal-600 rounded-3xl group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                    <i data-lucide="key" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Move-In/Out</h3>
+                <h3 class="text-2xl font-bold mb-4 invisible">Move-In/Out</h3> <p class="text-slate-500 leading-relaxed -mt-8">Total sanitization for empty homes. We ensure your next chapter starts in a pristine, fresh environment.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 px-6 border-t border-slate-200 text-center">
-        <div class="flex items-center justify-center gap-2 mb-4">
+    <section id="about" class="py-24 bg-slate-50 border-y border-slate-100 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 italic text-slate-900">"We treat every home like it's our own because we know how much it matters."</h2>
+            <div class="flex items-center justify-center gap-4 mb-10">
+                <div class="h-px w-8 bg-teal-500"></div>
+                <p class="text-teal-600 font-bold uppercase tracking-widest text-xs">The PurePath Promise</p>
+                <div class="h-px w-8 bg-teal-500"></div>
+            </div>
+            <p class="text-lg text-slate-600 leading-loose">
+                Founded by a mother-daughter duo in Huntington Beach, PurePath was born from a simple idea: <strong>Hospitality-grade cleaning meets family-level care.</strong> We don't just "clean"—we restore your space so you can focus on what matters.
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 text-center border-t border-slate-100">
+        <div class="flex items-center justify-center gap-2 mb-6">
             <i data-lucide="sparkles" class="text-teal-500 w-5 h-5"></i>
-            <span class="font-bold text-lg tracking-tight text-slate-900">PurePath Home Services</span>
+            <span class="font-bold text-lg tracking-tight text-slate-900">PUREPATH</span>
         </div>
-        <p class="text-slate-400 text-sm mb-6">Serving Huntington Beach & Coastal Orange County</p>
-        <div class="pt-8 border-t border-slate-100">
-            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Managed by Mayteck Services | Zero-Cost Infrastructure Tech</p>
+        <p class="text-slate-400 text-sm mb-8">Serving Huntington Beach & Coastal Orange County</p>
+        <div class="pt-8 border-t border-slate-50">
+            <p class="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-semibold">Managed by Mayteck Services | Zero-Cost Infrastructure Tech</p>
         </div>
     </footer>
 
     <script>
+        // Initialize Lucide Icons
         lucide.createIcons();
     </script>
 </body>
